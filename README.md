@@ -1,4 +1,4 @@
-# 세종 페르소나 AI 실습
+# 튜링 페르소나 AI 실습
 
 VESSL에서 실행하는 하나의 언어 모델 서버를 CLI, 웹 브라우저, Roblox Studio에서
 각각 사용할 수 있는 실습 프로젝트입니다.
@@ -8,7 +8,7 @@ VESSL에서 실행하는 하나의 언어 모델 서버를 CLI, 웹 브라우저
 - CLI 대화: [`persona-core/README.md`](persona-core/README.md)
 - 웹 브라우저 채팅: [`web-chat/README.md`](web-chat/README.md)
 - Roblox 채팅: [`roblox-chat/README.md`](roblox-chat/README.md)
-- Roblox Studio 프로젝트: [`SejongAI.rbxlx`](roblox-chat/SejongAI/SejongAI.rbxlx)
+- Roblox Studio 프로젝트: [`TuringAI.rbxlx`](roblox-chat/TuringAI/TuringAI.rbxlx)
 
 ## 공통 실행 환경
 
@@ -24,7 +24,7 @@ VESSL Workspace는 `Torch 2.9.1 (CUDA 13.0.1, Python 3.13)` 컨테이너와
 persona-core/             # 공통 페르소나와 터미널 대화 실습
 web-chat/                 # 웹 채팅 서버와 화면
 roblox-chat/
-  SejongAI/               # Roblox Studio 프로젝트와 Luau 코드
+  TuringAI/               # Roblox Studio 프로젝트와 Luau 코드
   vessl-server/           # Roblox용 Python API 서버
 ```
 

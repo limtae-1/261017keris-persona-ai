@@ -1,10 +1,10 @@
--- 플레이어의 질문을 서버로 보내고 세종 NPC 머리 위에 답변 말풍선을 띄운다.
+-- 플레이어의 질문을 서버로 보내고 튜링 NPC 머리 위에 답변 말풍선을 띄운다.
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TextChatService = game:GetService("TextChatService")
 local Players = game:GetService("Players")
 
-local NPC_NAME = "Sejong"
+local NPC_NAME = "Turing"
 local MAX_BUBBLE_LENGTH = 240
 
 local player = Players.LocalPlayer
@@ -33,7 +33,7 @@ title.Position = UDim2.fromOffset(18, 12)
 title.Size = UDim2.new(1, -36, 0, 24)
 title.BackgroundTransparency = 1
 title.Font = Enum.Font.GothamBold
-title.Text = "세종과의 대화"
+title.Text = "튜링과의 대화"
 title.TextColor3 = Color3.fromRGB(42, 49, 46)
 title.TextSize = 18
 title.TextXAlignment = Enum.TextXAlignment.Left
@@ -44,7 +44,7 @@ answer.Position = UDim2.fromOffset(18, 42)
 answer.Size = UDim2.new(1, -36, 0, 78)
 answer.BackgroundTransparency = 1
 answer.Font = Enum.Font.Gotham
-answer.Text = "세종에게 질문해 보세요."
+answer.Text = "튜링 박사에게 질문해 보세요."
 answer.TextColor3 = Color3.fromRGB(70, 76, 73)
 answer.TextSize = 15
 answer.TextWrapped = true
@@ -59,7 +59,7 @@ input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 input.BorderSizePixel = 0
 input.ClearTextOnFocus = false
 input.Font = Enum.Font.Gotham
-input.PlaceholderText = "전하께 말을 건네 보세요"
+input.PlaceholderText = "튜링 박사에게 말을 건네 보세요"
 input.Text = ""
 input.TextColor3 = Color3.fromRGB(35, 39, 37)
 input.TextSize = 15
@@ -104,7 +104,7 @@ local function showNpcBubble(text)
 	local npc = workspace:FindFirstChild(NPC_NAME)
 	local head = npc and npc:FindFirstChild("Head")
 	if not head or not head:IsA("BasePart") then
-		answer.Text = text .. "\n\n[Workspace에서 Sejong NPC의 Head를 찾지 못했습니다.]"
+		answer.Text = text .. "\n\n[Workspace에서 Turing NPC의 Head를 찾지 못했습니다.]"
 		return
 	end
 

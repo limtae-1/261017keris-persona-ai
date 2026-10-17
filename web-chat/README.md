@@ -1,6 +1,6 @@
-# 세종 웹 채팅 실습
+# 튜링 웹 채팅 실습
 
-VESSL에서 EXAONE 모델과 웹 서버를 실행하고 브라우저로 세종 페르소나와 대화하는 실습입니다.
+VESSL에서 EXAONE 모델과 웹 서버를 실행하고 브라우저로 앨런 튜링 페르소나와 대화하는 실습입니다.
 
 ## 1. Workspace 만들기
 
@@ -17,7 +17,7 @@ VESSL Workspace를 다음 옵션으로 생성합니다.
 
 ```bash
 cd /root
-git clone --depth 1 https://github.com/gamza-lab/persona-ai.git
+git clone --depth 1 https://github.com/limtae-1/261017keris-persona-ai.git persona-ai
 cd persona-ai
 python3.13 -m venv .venv
 .venv/bin/python -m pip install -r web-chat/requirements.txt
@@ -71,9 +71,9 @@ VESSL의 **Connect > Exposed services**에서 `web-chat` 주소를 열면 됩니
 web-chat/
   server.py               # 서버 시작
   models/conversation.py  # 대화 데이터
-  models/persona.py       # 세종 자료 검색과 모델 호출
+  models/persona.py       # 튜링 자료 검색과 모델 호출
   controllers/chat.py     # 질문과 답변 처리
   views/chat.py           # 웹 화면
   views/style.css         # 화면 스타일
-  views/sejong.webp       # 세종 초상 이미지
+  views/turing.webp       # 튜링 이니셜 이미지
 ```

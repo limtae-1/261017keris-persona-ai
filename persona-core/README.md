@@ -1,6 +1,6 @@
-# 세종 페르소나 CLI 실습
+# 튜링 페르소나 CLI 실습
 
-VESSL에서 EXAONE 모델 서버를 실행하고 터미널에서 세종 페르소나와 대화하는 기본 실습입니다.
+VESSL에서 EXAONE 모델 서버를 실행하고 터미널에서 앨런 튜링 페르소나와 대화하는 기본 실습입니다.
 이 폴더의 프롬프트와 역사 자료는 웹 및 Roblox 채팅 실습에서도 공통으로 사용합니다.
 
 ## 폴더 구조
@@ -8,7 +8,7 @@ VESSL에서 EXAONE 모델 서버를 실행하고 터미널에서 세종 페르�
 ```text
 persona-core/
   app.py       # 터미널 대화 프로그램과 공통 페르소나 로직
-  data.json    # 검색에 사용하는 세종대왕 역사 자료
+  data.json    # 검색에 사용하는 앨런 튜링 역사 자료
 ```
 
 ## 1. Workspace 만들기
@@ -24,7 +24,7 @@ VESSL Workspace를 다음 옵션으로 생성합니다.
 
 ```bash
 cd /root
-git clone https://github.com/gamza-lab/persona-ai.git
+git clone https://github.com/limtae-1/261017keris-persona-ai.git persona-ai
 cd persona-ai
 python3.13 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt

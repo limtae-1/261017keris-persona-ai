@@ -1,17 +1,17 @@
-# 세종AI Roblox 실습
+# 튜링AI Roblox 실습
 
-VESSL 서버에서 세종 페르소나 모델과 Roblox용 API를 실행하고, 개인 PC의 Roblox Studio에서 서버 주소를 연결하는 실습입니다.
+VESSL 서버에서 튜링 페르소나 모델과 Roblox용 API를 실행하고, 개인 PC의 Roblox Studio에서 서버 주소를 연결하는 실습입니다.
 
 ## 프로젝트 구성
 
 ```text
 roblox-chat/
-  SejongAI/       # Roblox Studio 프로젝트와 Roblox에서 실행되는 Luau 코드
+  TuringAI/       # Roblox Studio 프로젝트와 Roblox에서 실행되는 Luau 코드
   vessl-server/   # VESSL에서 실행되는 Python API 서버
 ```
 
-`SejongAI/ServerScriptService`는 Roblox 서버에서 VESSL API를 호출하고,
-`SejongAI/StarterPlayer`는 각 플레이어의 화면과 입력을 처리합니다.
+`TuringAI/ServerScriptService`는 Roblox 서버에서 VESSL API를 호출하고,
+`TuringAI/StarterPlayer`는 각 플레이어의 화면과 입력을 처리합니다.
 이 코드는 Roblox 런타임에서 실행되므로 Python이 아니라 Luau로 작성합니다.
 
 ## 전체 순서
@@ -55,7 +55,7 @@ nvidia-smi
 
 ```bash
 cd /root
-git clone --depth 1 https://github.com/gamza-lab/persona-ai.git
+git clone --depth 1 https://github.com/limtae-1/261017keris-persona-ai.git persona-ai
 cd persona-ai
 ```
 
@@ -120,10 +120,10 @@ WEB_HOST=0.0.0.0 WEB_PORT=7860 python roblox-chat/vessl-server/server.py
 
 ## 1. Roblox 프로젝트 다운로드하기
 
-1. GitHub에서 [`SejongAI.rbxlx`](./SejongAI/SejongAI.rbxlx)를 엽니다.
+1. GitHub에서 [`TuringAI.rbxlx`](./TuringAI/TuringAI.rbxlx)를 엽니다.
 2. 오른쪽 위의 **Download raw file**을 눌러 개인 PC에 내려받습니다.
 3. Roblox Studio를 실행합니다.
-4. **파일 > 파일에서 열기**를 누르고 `SejongAI.rbxlx`를 선택합니다.
+4. **파일 > 파일에서 열기**를 누르고 `TuringAI.rbxlx`를 선택합니다.
 5. **파일 > Roblox에 다른 이름으로 게시**를 눌러 자신의 계정에 저장합니다.
 
 ## 2. HTTP 요청 허용하기
@@ -149,7 +149,7 @@ Roblox Studio 위쪽의 **홈 > 게임 설정 > 보안**을 열고 **HTTP 요청
 1. Roblox Studio 위쪽의 **Play**를 누릅니다.
 2. 화면 아래 입력칸에 질문을 입력합니다.
 3. **보내기**를 누릅니다.
-4. 세종 캐릭터 위에 답변 말풍선이 나타나면 성공입니다.
+4. 튜링 캐릭터 위에 답변 말풍선이 나타나면 성공입니다.
 
 # 실습 종료
 

@@ -48,9 +48,9 @@ def build_view(controller):
         except HTTPException as error:
             raise gr.Error(error.detail)
 
-    with gr.Blocks(title="세종과의 만남", analytics_enabled=False, fill_height=True, fill_width=True) as view:
-        gr.HTML('<header class="persona-header"><div class="seal">世宗</div>'
-                '<div><p>1449 · 조선</p><h1>세종과의 만남</h1></div>'
+    with gr.Blocks(title="튜링과의 만남", analytics_enabled=False, fill_height=True, fill_width=True) as view:
+        gr.HTML('<header class="persona-header"><div class="seal">A.T.</div>'
+                '<div><p>1950 · 맨체스터</p><h1>튜링과의 만남</h1></div>'
                 '<span class="fiction">AI 역사 인물 · 창작 대화</span></header>')
         build_chat(respond)
     return view
@@ -60,10 +60,10 @@ def build_chat(respond):
     """입력창과 대화 목록을 구성한다. 전송·재시도·취소 동작은 Gradio가 담당한다."""
     return gr.ChatInterface(
             fn=respond,
-            chatbot=gr.Chatbot(label="세종", placeholder=OPENING, height="65vh",
+            chatbot=gr.Chatbot(label="튜링", placeholder=OPENING, height="65vh",
                                buttons=["copy"], allow_tags=False,
-                               avatar_images=(None, str(Path(__file__).with_name("sejong.webp")))),
-            textbox=gr.Textbox(placeholder="전하께 말을 건네 보세요", max_lines=5,
+                               avatar_images=(None, str(Path(__file__).with_name("turing.webp")))),
+            textbox=gr.Textbox(placeholder="튜링 박사에게 말을 건네 보세요", max_lines=5,
                                label="메시지", show_label=False,
                                max_length=500, submit_btn=True, stop_btn=True),
             flagging_mode="never", save_history=False, api_visibility="private",

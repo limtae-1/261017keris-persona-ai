@@ -105,7 +105,7 @@ local function requestReply(player, message)
 
 	if not requestOk or not response.Success then
 		warn("Persona API request failed", requestOk and response.StatusCode or response)
-		sendError(player, "세종의 답변을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.")
+		sendError(player, "튜링의 답변을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.")
 		return
 	end
 

@@ -1,5 +1,5 @@
 {
-  "name": "PersonaSejongChat",
+  "name": "PersonaTuringChat",
   "tree": {
     "$className": "DataModel",
     "HttpService": {
@@ -10,7 +10,7 @@
     },
     "Workspace": {
       "$className": "Workspace",
-      "SejongGround": {
+      "TuringGround": {
         "$className": "Part",
         "$properties": {
           "Anchored": true,
@@ -23,7 +23,7 @@
           "TopSurface": "Smooth"
         }
       },
-      "SejongSpawn": {
+      "TuringSpawn": {
         "$className": "SpawnLocation",
         "$properties": {
           "Anchored": true,
@@ -35,8 +35,8 @@
           "Size": [8, 1, 8]
         }
       },
-      "Sejong": {
-        "$path": "SejongCharacter.rbxm"
+      "Turing": {
+        "$path": "TuringCharacter.rbxm"
       }
     },
     "ServerScriptService": {

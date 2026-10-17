@@ -10,7 +10,7 @@ from models.conversation import ChatRequest
 
 
 class PersonaModel:
-    """기존 세종 프롬프트와 역사 자료 검색을 재사용해 vLLM에 답변을 요청한다."""
+    """기존 튜링 프롬프트와 역사 자료 검색을 재사용해 vLLM에 답변을 요청한다."""
 
     def __init__(self):
         """검색기와 모델 클라이언트를 만들고 프롬프트→모델→문자열 처리를 연결한다."""

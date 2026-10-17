@@ -121,7 +121,7 @@ local function requestReply(player, message)
 
 	if not requestOk or not response.Success then
 		warn("Persona API request failed", requestOk and response.StatusCode or response)
-		sendError(player, "세종의 답변을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.")
+		sendError(player, "튜링의 답변을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.")
 		return
 	end
 
@@ -190,13 +190,13 @@ end)
       <Item class="LocalScript" referent="5">
         <Properties>
           <string name="Name">PersonaChatClient</string>
-          <string name="Source"><![CDATA[-- 플레이어의 질문을 서버로 보내고 세종 NPC 머리 위에 답변 말풍선을 띄운다.
+          <string name="Source"><![CDATA[-- 플레이어의 질문을 서버로 보내고 튜링 NPC 머리 위에 답변 말풍선을 띄운다.
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TextChatService = game:GetService("TextChatService")
 local Players = game:GetService("Players")
 
-local NPC_NAME = "Sejong"
+local NPC_NAME = "Turing"
 local MAX_BUBBLE_LENGTH = 240
 
 local player = Players.LocalPlayer
@@ -225,7 +225,7 @@ title.Position = UDim2.fromOffset(18, 12)
 title.Size = UDim2.new(1, -36, 0, 24)
 title.BackgroundTransparency = 1
 title.Font = Enum.Font.GothamBold
-title.Text = "세종과의 대화"
+title.Text = "튜링과의 대화"
 title.TextColor3 = Color3.fromRGB(42, 49, 46)
 title.TextSize = 18
 title.TextXAlignment = Enum.TextXAlignment.Left
@@ -236,7 +236,7 @@ answer.Position = UDim2.fromOffset(18, 42)
 answer.Size = UDim2.new(1, -36, 0, 78)
 answer.BackgroundTransparency = 1
 answer.Font = Enum.Font.Gotham
-answer.Text = "세종에게 질문해 보세요."
+answer.Text = "튜링 박사에게 질문해 보세요."
 answer.TextColor3 = Color3.fromRGB(70, 76, 73)
 answer.TextSize = 15
 answer.TextWrapped = true
@@ -251,7 +251,7 @@ input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 input.BorderSizePixel = 0
 input.ClearTextOnFocus = false
 input.Font = Enum.Font.Gotham
-input.PlaceholderText = "전하께 말을 건네 보세요"
+input.PlaceholderText = "튜링 박사에게 말을 건네 보세요"
 input.Text = ""
 input.TextColor3 = Color3.fromRGB(35, 39, 37)
 input.TextSize = 15
@@ -296,7 +296,7 @@ local function showNpcBubble(text)
 	local npc = workspace:FindFirstChild(NPC_NAME)
 	local head = npc and npc:FindFirstChild("Head")
 	if not head or not head:IsA("BasePart") then
-		answer.Text = text .. "\n\n[Workspace에서 Sejong NPC의 Head를 찾지 못했습니다.]"
+		answer.Text = text .. "\n\n[Workspace에서 Turing NPC의 Head를 찾지 못했습니다.]"
 		return
 	end
 
@@ -355,7 +355,7 @@ end)
     </Properties>
     <Item class="Model" referent="7">
       <Properties>
-        <string name="Name">Sejong</string>
+        <string name="Name">Turing</string>
         <BinaryString name="AttributesSerialize"></BinaryString>
         <SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
         <token name="LevelOfDetail">0</token>
@@ -401,7 +401,7 @@ end)
           <SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
           <token name="CollisionType">0</token>
           <token name="DisplayDistanceType">0</token>
-          <string name="DisplayName">세종</string>
+          <string name="DisplayName">튜링</string>
           <bool name="EvaluateStateMachine">true</bool>
           <float name="HealthDisplayDistance">100</float>
           <token name="HealthDisplayType">2</token>
@@ -1479,7 +1479,7 @@ end)
     </Item>
     <Item class="Part" referent="20">
       <Properties>
-        <string name="Name">SejongGround</string>
+        <string name="Name">TuringGround</string>
         <bool name="Anchored">true</bool>
         <token name="BottomSurface">0</token>
         <bool name="CanCollide">true</bool>
@@ -1500,7 +1500,7 @@ end)
     </Item>
     <Item class="SpawnLocation" referent="21">
       <Properties>
-        <string name="Name">SejongSpawn</string>
+        <string name="Name">TuringSpawn</string>
         <bool name="Anchored">true</bool>
         <bool name="CanCollide">true</bool>
         <Color3uint8 name="Color3uint8">16316664</Color3uint8>
