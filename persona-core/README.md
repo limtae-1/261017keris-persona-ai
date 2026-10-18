@@ -8,7 +8,7 @@ VESSL에서 EXAONE 모델 서버를 실행하고 터미널에서 앨런 튜링 �
 ```text
 persona-core/
   app.py       # 터미널 대화 프로그램과 공통 페르소나 로직
-  data.json    # 검색에 사용하는 세종대왕 역사 자료
+  data.json    # 검색에 사용하는 앨런튜링의 자료
 ```
 
 ## 1. Workspace 만들기
